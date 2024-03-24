@@ -4,7 +4,7 @@
 #include <QObject>
 #include <QGraphicsPixmapItem>
 
-class Player: public QObject, public QGraphicsRectItem, public QGraphicsPixmapItem
+class Player: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:

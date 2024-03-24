@@ -29,14 +29,15 @@ int main(int argc, char *argv[])
     QGraphicsScene scene;
     scene.setSceneRect(0, 0, 800, 600);
     //scene.addItem(player);
-    scene.addItem(static_cast<QGraphicsPixmapItem*>(player));
-    player->QGraphicsPixmapItem::setFocus();
+
+    player->setFocus();
     // *******  Setting the foucs to the Player ********
     // player->setFlag(QGraphicsPixmapItem::ItemIsFocusable);
     // player->setFocus();
+    scene.addItem(player);
 
     // *******  Adjust the location of the Player (middle of the screen) ********
-    player->QGraphicsPixmapItem::setPos(view.width()/2, view.height()-player->rect().height());
+    player->setPos(view.width()/2, view.height()-100);
 
    // *******   Assign scene to the view   ***************
     view.setScene(&scene);
