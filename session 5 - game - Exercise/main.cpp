@@ -28,7 +28,8 @@ int main(int argc, char *argv[])
     // ******* Create the Scene ********
     QGraphicsScene scene;
     scene.setSceneRect(0, 0, 800, 600);
-    QGraphicsPixmapItem::scene.addItem(player);
+    //scene.addItem(player);
+    scene.addItem(static_cast<QGraphicsPixmapItem*>(player));
     player->QGraphicsPixmapItem::setFocus();
     // *******  Setting the foucs to the Player ********
     // player->setFlag(QGraphicsPixmapItem::ItemIsFocusable);

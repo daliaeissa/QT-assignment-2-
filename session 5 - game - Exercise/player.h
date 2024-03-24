@@ -9,7 +9,6 @@ class Player: public QObject, public QGraphicsRectItem, public QGraphicsPixmapIt
     Q_OBJECT
 public:
     Player();
-    //explicit Player(QObject *parent = nullptr);
 public:
     void keyPressEvent(QKeyEvent * event);
 public slots:

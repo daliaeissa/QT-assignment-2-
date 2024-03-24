@@ -15,24 +15,23 @@ void Player::keyPressEvent(QKeyEvent *event)
         // *******  Event Handling for the Player ********
     if(event->key()== Qt::Key_Left)
     {
-        if(x()>0) // to prevent the player from getting out of the screen
+        if(QGraphicsPixmapItem::x()>0) // to prevent the player from getting out of the screen
         {
-        setPos(x()-10,y());
+        QGraphicsPixmapItem::setPos(QGraphicsPixmapItem::x()-10,QGraphicsPixmapItem::y());
         }
     }
     else if(event->key()== Qt::Key_Right)
 
-    { if(x()+100<800) // to prevent the player from getting out of the screen
-        setPos(x()+10,y());
+    { if(QGraphicsPixmapItem::x()+100<800) // to prevent the player from getting out of the screen
+        QGraphicsPixmapItem::setPos(QGraphicsPixmapItem::x()+10,QGraphicsPixmapItem::y());
     }
     else if(event->key()== Qt::Key_Space)
     {
         Bullet * bullet = new Bullet();
-        bullet->setPos(x()+30,y());
+        bullet->setPos(QGraphicsPixmapItem::x()+30,QGraphicsPixmapItem::y());
         QGraphicsPixmapItem::scene()->addItem(bullet);
 
     }
-
 
 }
 
