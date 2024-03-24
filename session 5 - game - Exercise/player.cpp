@@ -5,6 +5,7 @@
 #include <QDebug>
 #include "enemy.h"
 #include <QList>
+#include<QGraphicsPixmapItem>
 Player::Player() {
 
 }
@@ -28,7 +29,7 @@ void Player::keyPressEvent(QKeyEvent *event)
     {
         Bullet * bullet = new Bullet();
         bullet->setPos(x()+30,y());
-        scene()->addItem(bullet);
+        QGraphicsPixmapItem::scene()->addItem(bullet);
 
     }
 
@@ -39,6 +40,6 @@ void Player::keyPressEvent(QKeyEvent *event)
  // CreateEnemy function used to create the eneimes
 void Player::createEnemy()
 { Enemy* enemy = new Enemy();
-  scene()->addItem(enemy);
+  QGraphicsPixmapItem::scene()->addItem(enemy);
 
 }
