@@ -2,12 +2,14 @@
 #define PLAYER_H
 #include <QGraphicsItem>
 #include <QObject>
+#include <QGraphicsPixmapItem>
 
-class Player: public QObject, public QGraphicsRectItem
+class Player: public QObject, public QGraphicsRectItem, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:
     Player();
+    //explicit Player(QObject *parent = nullptr);
 public:
     void keyPressEvent(QKeyEvent * event);
 public slots:
