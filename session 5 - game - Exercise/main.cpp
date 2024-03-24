@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     Player* player = new Player();
     // player->setRect(0, 0, 60, 100);
     // player->setBrush(Qt::red);
-    QPixmap spaceship("C:/Users/dalia/Desktop/Spring 2024 semester/CS2 lab/Assignments/Assignment 2 QT");
+    QPixmap spaceship("C:/Users/dalia/Desktop/Spring 2024 semester/CS2 lab/Assignments/Assignment 2 QT/spaceship.jpg");
     player->setPixmap(spaceship.scaled(100,100));
 
     // ******* Create the Scene ********
@@ -41,6 +41,8 @@ int main(int argc, char *argv[])
 
    // *******   Assign scene to the view   ***************
     view.setScene(&scene);
+    view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     // *******  Create the Enemies automatically ********
     QTimer * time = new QTimer();

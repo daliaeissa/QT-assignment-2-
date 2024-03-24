@@ -39,6 +39,6 @@ void Player::keyPressEvent(QKeyEvent *event)
  // CreateEnemy function used to create the eneimes
 void Player::createEnemy()
 { Enemy* enemy = new Enemy();
-  QGraphicsPixmapItem::scene()->addItem(enemy);
+  scene()->addItem(enemy);
 
 }
